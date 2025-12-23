@@ -1,14 +1,21 @@
+import { ClaimRewardForm } from "@/components/rewards/ClaimRewardForm";
+import { RewardHistoryTable } from "@/components/rewards/RewardHistoryTable";
+
 const Rewards = () => {
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-2xl font-bold tracking-tight">Claim Rewards</h1>
         <p className="text-muted-foreground">
-          Claim your stock rewards here
+          Claim your stock rewards and view your history
         </p>
       </div>
-      <div className="flex items-center justify-center h-64 border-2 border-dashed rounded-lg">
-        <p className="text-muted-foreground">Coming in Phase 3</p>
+
+      <div className="grid gap-6 lg:grid-cols-2">
+        <ClaimRewardForm />
+        <div className="lg:col-span-1">
+          <RewardHistoryTable />
+        </div>
       </div>
     </div>
   );
