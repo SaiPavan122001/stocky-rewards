@@ -18,6 +18,13 @@ export function formatINR(value: number): string {
 }
 
 /**
+ * Alias for formatINR for convenience
+ */
+export function formatCurrency(value: number): string {
+  return formatINR(value);
+}
+
+/**
  * Format large numbers with K, L, Cr suffixes (Indian notation)
  */
 export function formatCompactINR(value: number): string {
@@ -34,11 +41,25 @@ export function formatCompactINR(value: number): string {
 }
 
 /**
+ * Alias for formatCompactINR for convenience
+ */
+export function formatCompactCurrency(value: number): string {
+  return formatCompactINR(value);
+}
+
+/**
  * Format percentage with sign
  */
 export function formatPercentage(value: number): string {
   const sign = value >= 0 ? "+" : "";
   return `${sign}${value.toFixed(2)}%`;
+}
+
+/**
+ * Alias for formatPercentage for convenience
+ */
+export function formatPercent(value: number): string {
+  return formatPercentage(value);
 }
 
 /**
